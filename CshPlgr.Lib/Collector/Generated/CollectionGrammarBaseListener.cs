@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace CshPlgr.Collector.Generated {
+namespace CshPlgr.Lib.Collector.Generated {
 
 using Antlr4.Runtime.Misc;
 using IErrorNode = Antlr4.Runtime.Tree.IErrorNode;
@@ -350,4 +350,4 @@ public partial class CollectionGrammarBaseListener : ICollectionGrammarListener 
 	/// <remarks>The default implementation does nothing.</remarks>
 	public virtual void VisitErrorNode([NotNull] IErrorNode node) { }
 }
-} // namespace CshPlgr.Collector.Generated
+} // namespace CshPlgr.Lib.Collector.Generated

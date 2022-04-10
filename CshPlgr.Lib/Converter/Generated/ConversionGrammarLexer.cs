@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace CshPlgr.Converter.Generated {
+namespace CshPlgr.Lib.Converter.Generated {
 using System;
 using System.IO;
 using System.Text;
@@ -440,4 +440,4 @@ public partial class ConversionGrammarLexer : Lexer {
 
 
 }
-} // namespace CshPlgr.Converter.Generated
+} // namespace CshPlgr.Lib.Converter.Generated

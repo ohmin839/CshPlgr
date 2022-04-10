@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace CshPlgr.Converter.Generated {
+namespace CshPlgr.Lib.Converter.Generated {
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using IToken = Antlr4.Runtime.IToken;
@@ -456,4 +456,4 @@ public interface IConversionGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitAnychar([NotNull] ConversionGrammarParser.AnycharContext context);
 }
-} // namespace CshPlgr.Converter.Generated
+} // namespace CshPlgr.Lib.Converter.Generated
