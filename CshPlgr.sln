@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CshPlgr.Lib", "CshPlgr.Lib\CshPlgr.Lib.csproj", "{1BEA035F-A288-4CF5-8C56-F3545B3C9061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CshPlgr.Lib.Test", "CshPlgr.Lib.Test\CshPlgr.Lib.Test.csproj", "{99DA2415-180F-4209-8E5E-AB2FE86B180C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1BEA035F-A288-4CF5-8C56-F3545B3C9061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BEA035F-A288-4CF5-8C56-F3545B3C9061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BEA035F-A288-4CF5-8C56-F3545B3C9061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DA2415-180F-4209-8E5E-AB2FE86B180C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DA2415-180F-4209-8E5E-AB2FE86B180C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DA2415-180F-4209-8E5E-AB2FE86B180C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DA2415-180F-4209-8E5E-AB2FE86B180C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
