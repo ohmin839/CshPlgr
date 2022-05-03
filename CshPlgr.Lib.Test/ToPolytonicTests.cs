@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Xunit;
-
 using static CshPlgr.Lib.API;
 
 namespace CshPlgr.Lib.Test
