@@ -28,7 +28,7 @@ namespace CshPlgr.Lib
             return ConvertToPolytonic(reader);
         }
 
-        public static SortedSet<string> CollectPolytonicWords(TextReader reader)
+        public static List<string> CollectPolytonicWords(TextReader reader)
         {
             var inputStream = new AntlrInputStream(reader);
             var lexer = new CollectionGrammarLexer(inputStream);
@@ -39,11 +39,11 @@ namespace CshPlgr.Lib
             parser.text();
             return listener.PolytonicWords;
         }
-        public static SortedSet<string> CollectPolytonicWords(string text)
+        public static List<string> CollectPolytonicWords(string text)
         {
             if (string.IsNullOrEmpty(text))
             {
-                return new SortedSet<string>();
+                return new List<string>();
             }
             var reader = new StringReader(text);
             return CollectPolytonicWords(reader);

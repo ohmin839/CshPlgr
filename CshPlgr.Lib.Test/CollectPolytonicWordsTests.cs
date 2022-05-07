@@ -9,7 +9,7 @@ namespace CshPlgr.Lib.Test
     {
         [Theory]
         [ClassData(typeof(CollectPolytonicWordsTests.TestData))]
-        public void TestMethod(string argument, SortedSet<string> expected)
+        public void TestMethod(string argument, List<string> expected)
         {
             var actual = CollectPolytonicWords(argument);
             Assert.Equal(expected, actual);
@@ -18,9 +18,9 @@ namespace CshPlgr.Lib.Test
         {
             public IEnumerator<object[]> GetEnumerator()
             {
-                yield return new object[] { "", new SortedSet<string>() };
-                yield return new object[] { "α β γ α", new SortedSet<string>() { "α", "β", "γ" } };
-                yield return new object[] { "Α Β Γ Α", new SortedSet<string>() { "Α", "Β", "Γ" } };
+                yield return new object[] { "", new List<string>() };
+                yield return new object[] { "α β γ", new List<string>() { "α", "β", "γ" } };
+                yield return new object[] { "Α Β Γ", new List<string>() { "Α", "Β", "Γ" } };
             }
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }

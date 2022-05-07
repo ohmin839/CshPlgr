@@ -6,7 +6,7 @@ namespace CshPlgr.Cli.Collector
     [Cmdlet("Collect", "PolytonicWords")]
     public class Cmdlet : System.Management.Automation.Cmdlet
     {
-        private SortedSet<string> allWords = new SortedSet<string>();
+        private List<string> allWords = new();
 
         [Parameter(
             Position = 0,
@@ -24,10 +24,7 @@ namespace CshPlgr.Cli.Collector
                 foreach (var line in Lines)
                 {
                     var words = CollectPolytonicWords(line);
-                    foreach (var word in words)
-                    {
-                        allWords.Add(word);
-                    }
+                    allWords.AddRange(words);
                 }
             }
 

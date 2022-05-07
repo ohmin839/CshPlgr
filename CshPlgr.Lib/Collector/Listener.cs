@@ -5,17 +5,17 @@ namespace CshPlgr.Lib.Collector
 {
     internal class Listener: CollectionGrammarBaseListener
     {
-        private SortedSet<string> words = new SortedSet<string>();
+        private List<string> wordList = new();
 
         public override void ExitWord([NotNull] CollectionGrammarParser.WordContext context)
         {
-            var text = context.GetText();
-            words.Add(text);
+            var word = context.GetText();
+            wordList.Add(word);
         }
 
-        public SortedSet<string> PolytonicWords
+        public List<string> PolytonicWords
         {
-            get { return words; }
+            get { return wordList; }
         }
     }
 }
