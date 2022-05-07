@@ -8,19 +8,24 @@ namespace CshPlgr.Lib
 {
     public class API
     {
-        public static string ToPolytonic(string text)
+        public static string ToPolytonic(TextReader reader)
         {
-            if (string.IsNullOrEmpty(text))
-            {
-                return "";
-            }
-            var inputStream = new AntlrInputStream(text);
+            var inputStream = new AntlrInputStream(reader);
             var lexer = new ConversionGrammarLexer(inputStream);
             var tokenStream = new CommonTokenStream(lexer);
             var parser = new ConversionGrammarParser(tokenStream);
             var parseTree = parser.letters();
             var visitor = new Visitor();
             return visitor.VisitLetters(parseTree);
+        }
+        public static string ToPolytonic(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return "";
+            }
+            var reader = new StringReader(text);
+            return ToPolytonic(reader);
         }
 
         public static SortedSet<string> CollectPolytonicWords(TextReader reader)
@@ -36,6 +41,10 @@ namespace CshPlgr.Lib
         }
         public static SortedSet<string> CollectPolytonicWords(string text)
         {
+            if (string.IsNullOrEmpty(text))
+            {
+                return new SortedSet<string>();
+            }
             var reader = new StringReader(text);
             return CollectPolytonicWords(reader);
         }
