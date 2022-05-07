@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CshPlgr.Lib\CshPlgr.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
