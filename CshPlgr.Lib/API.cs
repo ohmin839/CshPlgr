@@ -8,7 +8,7 @@ namespace CshPlgr.Lib
 {
     public class API
     {
-        public static string ToPolytonic(TextReader reader)
+        public static string ConvertToPolytonic(TextReader reader)
         {
             var inputStream = new AntlrInputStream(reader);
             var lexer = new ConversionGrammarLexer(inputStream);
@@ -18,14 +18,14 @@ namespace CshPlgr.Lib
             var visitor = new Visitor();
             return visitor.VisitLetters(parseTree);
         }
-        public static string ToPolytonic(string text)
+        public static string ConvertToPolytonic(string text)
         {
             if (string.IsNullOrEmpty(text))
             {
                 return "";
             }
             var reader = new StringReader(text);
-            return ToPolytonic(reader);
+            return ConvertToPolytonic(reader);
         }
 
         public static SortedSet<string> CollectPolytonicWords(TextReader reader)
