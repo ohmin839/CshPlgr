@@ -1,5 +1,6 @@
 ﻿using Antlr4.Runtime.Misc;
 using CshPlgr.Lib.Converter.Generated;
+using System.Text;
 
 namespace CshPlgr.Lib.Converter
 {
@@ -7,7 +8,9 @@ namespace CshPlgr.Lib.Converter
     {
         public override string VisitLetters([NotNull] ConversionGrammarParser.LettersContext context)
         {
-            return context.children.Select(x => x.Accept(this)).Aggregate((x1, x2) => x1 + x2);
+            var sbr = new StringBuilder();
+            context.children.Select(x => x.Accept(this)).ToList().ForEach(x => sbr.Append(x));
+            return sbr.ToString();
         }
 
         public override string VisitLetter([NotNull] ConversionGrammarParser.LetterContext context)
